@@ -7,11 +7,7 @@ export default function Learning() {
       <ul class='box-singl'>
         <li className={css.list}>
           <h3 class={css.project}>UDEMY (react native)</h3>
-          <p className='text'>Backend developer (2025)</p>
-        </li>
-        <li className={css.list}>
-          <h3 class={css.project}>UDEMY (nest)</h3>
-          <p className='text'>Backend developer (2024)</p>
+          <p className='text'>Frontend developer (2025)</p>
         </li>
         <li className={css.list}>
           <h3 class={css.project}>IT School GoIT</h3>
