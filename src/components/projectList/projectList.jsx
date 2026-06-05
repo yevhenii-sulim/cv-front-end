@@ -16,11 +16,16 @@ const projects = [
     link: 'https://play.google.com/store/apps/details?id=com.savemeup',
     text: 'Developed a mobile application using React Native as part of a team. I was responsible for the frontend, including navigation, screens, and reusable components. Integrated native functionality in Kotlin with the help of ChatGPT and connected it with the JavaScript layer. Managed state with Zustand and optimized app performance.',
   },
+  {
+    title: 'Inkluvo Mobile App',
+    link: 'https://github.com/yevhenii-sulim/inkluvo',
+    text: 'Built the frontend of a mobile accessibility map application with React Native, TypeScript, and Mapbox. Implemented interactive map markers, place selection, place details screens, accessibility forms, comments, photo upload flow, user location handling, and persistent user state using Zustand and AsyncStorage.',
+  },
 ];
 
 export default function ProjectList() {
   return (
-    <div className='box'>
+    <div className={`box ${css.projects}`}>
       <h2 className='title-box'>Project experience</h2>
       <ul>
         {projects.map(({title, link, text}) => (
