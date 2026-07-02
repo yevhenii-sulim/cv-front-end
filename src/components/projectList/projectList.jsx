@@ -55,7 +55,12 @@ export default function ProjectList() {
         {projects.map(({title, link, description}) => (
           <li className={css.list}>
             <h3 class={css.project}>{title}</h3>
-            <a href='link' className='text'>
+            <a
+              href='link'
+              className='text'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               {link}
             </a>
 
