@@ -6,9 +6,10 @@ export default function Summery() {
       <h2 className='title-box'>Summary</h2>
       <ul>
         <li className={`text ${css.list}`}>
-          Frontend Developer with 2+ years of experience in team-based
-          development and pet projects. I focus on building responsive and
-          user-friendly interfaces using modern web technologies.
+          Frontend Developer with 2+ years of hands-on experience gained through
+          team-based development, collaborative projects, and personal products.
+          I focus on building responsive, user-friendly interfaces using React,
+          TypeScript, and modern frontend technologies.
         </li>
         <li className={`text ${css.list}`}>
           I have experience working with existing codebases, improving and

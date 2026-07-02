@@ -32,6 +32,7 @@ code {
   font-size: 16px;
   color: #000000;
   line-height: 1.2;
+  white-space: pre-line;
 }
 ul {
   margin: 0;

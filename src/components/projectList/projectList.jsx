@@ -4,22 +4,46 @@ const projects = [
   {
     title: 'Marketplace',
     link: 'https://yevhenii-sulim.github.io/marketplace/',
-    text: 'Worked primarily as the main frontend developer on a web application, being responsible for most of the UI implementation across the project. Built new pages and reusable components, ensuring consistency and maintainability of the interface. Focused on optimizing performance, improving code structure, and refining existing functionality to enhance user experience and application stability.',
+    description: {
+      text: 'Worked as the primary frontend developer and implemented most of the application’s user interface. Built pages, reusable components, forms, navigation, filtering, pagination, modals, notifications, and interactive UI elements.\n\nIntegrated REST APIs with Axios and managed server state using TanStack React Query. Used Redux Toolkit, React Redux, and Redux Persist for global and persistent application state. Implemented form handling and validation with Formik and Yup.\n\nDeveloped the interface using React, React Router, Material UI, MUI Joy, Emotion, and styled-components. Also worked with date pickers, carousels, loading states, transitions, and responsive layouts. Focused on reusable architecture, code maintainability, performance, and a consistent user experience.\n\nTechnologies: React, JavaScript, Redux Toolkit, React Redux, Redux Persist, TanStack React Query, React Router, Axios, Material UI, MUI Joy, Emotion, styled-components, Formik, Yup, Day.js, Swiper.',
+      technologies:
+        'React, JavaScript, Redux Toolkit, React Redux, Redux Persist, TanStack React Query, React Router, Axios, Material UI, MUI Joy, Emotion, styled-components, Formik, Yup, Day.js, Swiper',
+    },
   },
   {
     title: 'Team challenge',
     link: 'https://teamchallenge.io/',
-    text: 'Contributed to the development and improvement of a web application by building new components and features, as well as extending and refining existing ones. Worked with an established codebase, quickly understanding its structure to implement enhancements and fix issues efficiently. Focused on code optimization, maintainability, and improving overall performance.',
+    description: {
+      text:
+        'Worked as a junior frontend developer within an established production codebase. Developed and improved React components and application features, fixed UI issues, and extended existing functionality while following the project’s architecture and coding standards.\n\n' +
+        'Worked with React and TypeScript, integrated REST APIs using Axios, and managed asynchronous server data with TanStack React Query. Used Material UI and Emotion to build and maintain responsive interface components.\n\n' +
+        'Contributed to forms and validation using Formik and Yup, multilingual functionality with i18next and react-i18next, routing with React Router, and authentication flows based on Auth0. Also worked with file uploads, image galleries, Markdown content, notifications, and existing Stripe-related frontend components.\n\n' +
+        'Used Git-based team workflows and project tooling including ESLint, Prettier, Husky, lint-staged, TypeScript, and Webpack-related configuration. Quickly learned the structure of a large existing application and implemented changes while maintaining code quality and compatibility with the current codebase.',
+      technologies:
+        'React, TypeScript, React Router, TanStack React Query, Axios, Material UI, Emotion, Formik, Yup, i18next, Auth0, Stripe frontend integration, Git, ESLint, Prettier, Husky.',
+    },
   },
   {
     title: 'SaveMeUp',
     link: 'https://play.google.com/store/apps/details?id=com.savemeup',
-    text: 'Developed a mobile application using React Native as part of a team. I was responsible for the frontend, including navigation, screens, and reusable components. Integrated native functionality in Kotlin with the help of ChatGPT and connected it with the JavaScript layer. Managed state with Zustand and optimized app performance.',
+    description: {
+      text:
+        'Developed a mobile application using React Native as part of a team. I was responsible for the frontend, including navigation, screens, reusable components, and integration with backend APIs.\n\n' +
+        'Integrated native Android functionality written in Kotlin with the assistance of ChatGPT, reviewed the generated code, and connected it with the JavaScript layer. Managed application state with Zustand and focused on performance, code reuse, and application stability.',
+      technologies:
+        'React Native, JavaScript, Zustand, Kotlin integration, Android Studio, REST API, Git.',
+    },
   },
   {
     title: 'Inkluvo Mobile App',
     link: 'https://github.com/yevhenii-sulim/inkluvo',
-    text: 'Built the frontend of a mobile accessibility map application with React Native, TypeScript, and Mapbox. Implemented interactive map markers, place selection, place details screens, accessibility forms, comments, photo upload flow, user location handling, and persistent user state using Zustand and AsyncStorage.',
+    description: {
+      text:
+        'Built the frontend of a mobile accessibility map application for people who use wheelchairs. Implemented an interactive Mapbox map with custom markers, clustering, place selection, place details screens, accessibility forms, comments, photo upload flow, and user location handling.\n\n' +
+        'Managed application state with Zustand, persisted selected user data with AsyncStorage, integrated REST APIs, and worked on caching, map performance, and reusable component architecture.',
+      technologies:
+        'React Native, TypeScript, Mapbox, Zustand, AsyncStorage, REST API, Axios, Android Studio, Git.',
+    },
   },
 ];
 
@@ -28,13 +52,17 @@ export default function ProjectList() {
     <div className={`box ${css.projects}`}>
       <h2 className='title-box'>Project experience</h2>
       <ul>
-        {projects.map(({title, link, text}) => (
+        {projects.map(({title, link, description}) => (
           <li className={css.list}>
             <h3 class={css.project}>{title}</h3>
             <a href='link' className='text'>
               {link}
             </a>
-            <p className='text'>{text}</p>
+
+            <p className='text'>{description.text}</p>
+            <p className='text'>
+              <strong>Technologies:</strong> {description.technologies}
+            </p>
           </li>
         ))}
       </ul>
